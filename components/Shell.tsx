@@ -45,16 +45,6 @@ export function PageHero({ eyebrow, title, blurb, crumbs }: { eyebrow: string; t
   );
 }
 
-export function Empty({ what }: { what: string }) {
-  return (
-    <div className="empty">
-      <b>Nothing published here yet.</b>
-      <br />
-      {what} will appear as soon as they&apos;re added to <code>content/</code>.
-    </div>
-  );
-}
-
 export function PostCta({ kind }: { kind: "hiring" | "developer" | "job" }) {
   const copy = {
     hiring: { h: "Hiring engineers?", p: "I source, screen and shortlist React, Next.js and full-stack developers — and I read the repo before you spend interview time.", cta: "Let's talk hiring →", href: "/#contact" },

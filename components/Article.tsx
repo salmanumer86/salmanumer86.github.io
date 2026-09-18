@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Mdx } from "./Mdx";
-import { Empty, PageHero, PostCta, Shell, Crumbs } from "./Shell";
+import { PageHero, PostCta, Shell, Crumbs } from "./Shell";
+import { ComingSoon } from "./ComingSoon";
 import { PostCard } from "./Cards";
 import { formatDate, getAll, getBySlug, sectionLabel, type Section } from "@/lib/content";
 import { site, absoluteUrl } from "@/lib/site";
@@ -18,7 +19,7 @@ export function ListingPage({ section }: { section: Section }) {
       <section className="section light" style={{ paddingTop: 48 }}>
         <div className="wrap">
           {posts.length === 0 ? (
-            <Empty what={section === "advice" ? "Advice pieces" : "Articles"} />
+            <ComingSoon section={section} />
           ) : (
             <div className="post-grid stagger-grid">
               {posts.map((p) => (

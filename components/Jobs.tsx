@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Shell, PageHero, Empty } from "@/components/Shell";
+import { Shell, PageHero } from "@/components/Shell";
+import { ComingSoon } from "@/components/ComingSoon";
 import { JobCard } from "@/components/Cards";
 import { getJobs, isJobOpen, sectionLabel } from "@/lib/content";
 import { site, absoluteUrl } from "@/lib/site";
@@ -24,7 +25,7 @@ export function JobsListing() {
       <section className="section light" style={{ paddingTop: 48 }}>
         <div className="wrap">
           {jobs.length === 0 ? (
-            <Empty what="Job postings" />
+            <ComingSoon section="jobs" />
           ) : (
             <>
               {open.length === 0 && (

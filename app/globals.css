@@ -526,3 +526,53 @@ h1.hero-title .gold,.contact h2 .gold{
   .menu-btn{display:flex}
   .mobile-menu:not([hidden]){display:flex}
 }
+
+/* ---------- COMING SOON (empty sections) ---------- */
+.soon{position:relative;overflow:hidden;display:grid;grid-template-columns:300px 1fr;gap:56px;align-items:center;
+  background:var(--showcase);color:var(--cream);border:1px solid var(--line-gold);border-radius:22px;padding:56px;box-shadow:var(--shadow)}
+.soon::before{content:'';position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(520px 320px at 12% 50%,rgba(201,169,97,.18),transparent 60%),radial-gradient(480px 360px at 95% 0%,rgba(46,74,128,.45),transparent 60%)}
+@media(max-width:860px){.soon{grid-template-columns:1fr;gap:36px;padding:40px 28px;text-align:center}}
+@media(max-width:640px){.soon{padding:36px 22px;border-radius:16px}}
+.soon>*{position:relative}
+
+/* orbit graphic */
+.soon-orbit{width:240px;height:240px;margin:0 auto;position:relative;display:grid;place-items:center}
+.soon-ring{position:absolute;inset:0;border-radius:50%;border:1px solid rgba(201,169,97,.35);
+  background:conic-gradient(from 0deg,transparent 0 62%,rgba(201,169,97,.7) 78%,rgba(240,220,166,.2) 86%,transparent 92%);
+  -webkit-mask:radial-gradient(circle,transparent 63%,#000 64%);mask:radial-gradient(circle,transparent 63%,#000 64%);
+  animation:soonSpin 14s linear infinite}
+.soon-ring.r2{inset:26px;border-color:rgba(201,169,97,.2);animation-duration:9s;animation-direction:reverse;
+  background:conic-gradient(from 180deg,transparent 0 70%,rgba(201,169,97,.5) 84%,transparent 92%)}
+.soon-core{width:120px;height:120px;border-radius:50%;display:grid;place-items:center;
+  background:linear-gradient(160deg,var(--navy-2),var(--navy-deep));border:1px solid var(--line-gold);
+  box-shadow:inset 0 0 40px rgba(201,169,97,.08),0 20px 40px -20px rgba(0,0,0,.6);animation:soonBreathe 4s ease-in-out infinite}
+.soon-dot{width:14px;height:14px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 0 rgba(201,169,97,.5);animation:soonPulse 2.2s ease-out infinite}
+@keyframes soonSpin{to{transform:rotate(360deg)}}
+@keyframes soonBreathe{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
+@keyframes soonPulse{0%{box-shadow:0 0 0 0 rgba(201,169,97,.55)}100%{box-shadow:0 0 0 26px rgba(201,169,97,0)}}
+@media(max-width:860px){.soon-orbit{width:180px;height:180px}.soon-ring.r2{inset:20px}.soon-core{width:92px;height:92px}}
+
+.soon-body .eyebrow{color:var(--gold)}
+.soon-body .eyebrow::before{background:var(--gold)}
+@media(max-width:860px){.soon-body .eyebrow::before{display:none}}
+.live-dot{width:8px;height:8px;border-radius:50%;background:#4ade80;box-shadow:0 0 0 4px rgba(74,222,128,.18);animation:dotPulse 1.8s ease-in-out infinite}
+.soon-title{font-family:var(--font-serif),Georgia,serif;font-weight:600;font-size:clamp(28px,3.8vw,42px);line-height:1.12;letter-spacing:-.5px;margin:18px 0 16px;color:var(--cream)}
+.soon-title .gold{color:var(--gold);font-style:italic;font-weight:500;
+  background:linear-gradient(100deg,var(--gold) 20%,#f3e0ac 50%,var(--gold) 80%);background-size:200% auto;
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:shimmer 5s linear infinite}
+.soon-text{font-size:17px;line-height:1.75;color:var(--muted);max-width:600px}
+@media(max-width:860px){.soon-text{margin:0 auto}}
+.soon-topics{margin-top:26px}
+.soon-topics small{display:block;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:12px}
+.soon-topics .chip{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.1);color:var(--cream)}
+.soon-topics .chip:hover{border-color:var(--gold)}
+@media(max-width:860px){.soon-topics .chips{justify-content:center}}
+.soon-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+@media(max-width:860px){.soon-actions{justify-content:center}}
+.soon-actions .btn-ghost{border-color:rgba(255,255,255,.16);color:var(--cream)}
+.soon-actions .btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+.soon-actions .ic-svg{width:16px;height:16px}
+.soon-rss{margin-top:20px;font-size:13.5px;color:var(--muted)}
+.soon-rss a{color:var(--gold);text-decoration:underline;text-underline-offset:3px}
+@media(prefers-reduced-motion:reduce){.soon-ring,.soon-core,.soon-dot,.live-dot{animation:none}}
