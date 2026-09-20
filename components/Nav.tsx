@@ -65,7 +65,7 @@ export function Nav() {
   return (
     <nav className={`nav${scrolled ? " scrolled" : ""}${open ? " open" : ""}`}>
       <div className="nav-inner">
-        <Link href="/" className="brand" aria-label="Jazzari Software Solutions — home">
+        <Link href="/" className="brand" aria-label="Jazzari Software Solutions home">
           <span className="brand-logo">
             <img src="/jazzari-logo.png" alt="Jazzari" width="48" height="48" />
           </span>

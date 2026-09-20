@@ -91,12 +91,12 @@ export const sectionLabel: Record<Section, { title: string; eyebrow: string; blu
   blog: {
     title: "Articles on hiring, outsourcing and partnerships",
     eyebrow: "Blog",
-    blurb: "Notes on business development, tech recruiting and building teams in Pakistan — written by someone who also ships React.",
+    blurb: "Notes on business development, tech recruiting and building teams in Pakistan, written by someone who also writes React.",
   },
   advice: {
     title: "Career advice for developers",
     eyebrow: "Advice",
-    blurb: "Practical guidance on résumés, LinkedIn, interviews, and job offers. No fluff, just what actually works.",
+    blurb: "Practical guidance on CVs, LinkedIn, interviews and job offers. Simple advice that works.",
   },
   jobs: {
     title: "Open roles I'm hiring for",

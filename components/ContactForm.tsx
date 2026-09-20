@@ -51,7 +51,7 @@ export function ContactForm() {
       if (r.ok) {
         form.reset();
         setTopic("");
-        setNote({ type: "ok", msg: `Thanks, ${name}! Your message has been sent — I'll get back to you soon.` });
+        setNote({ type: "ok", msg: `Thanks, ${name}! Your message has been sent. I'll get back to you soon.` });
       } else {
         setNote({ type: "err", msg: `Something went wrong. Please email ${site.email} directly.` });
       }

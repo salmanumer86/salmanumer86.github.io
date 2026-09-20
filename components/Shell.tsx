@@ -47,7 +47,7 @@ export function PageHero({ eyebrow, title, blurb, crumbs }: { eyebrow: string; t
 
 export function PostCta({ kind }: { kind: "hiring" | "developer" | "job" }) {
   const copy = {
-    hiring: { h: "Hiring, outsourcing or exploring a partnership?", p: "I connect companies with vetted engineers and reliable development teams in Pakistan — and I read the repo before you spend interview time.", cta: "Let's talk →", href: "/#contact" },
+    hiring: { h: "Hiring, outsourcing or exploring a partnership?", p: "I connect companies with vetted engineers and reliable development teams in Pakistan. I read the repo before you spend interview time.", cta: "Let's talk →", href: "/#contact" },
     developer: { h: "Want a second pair of eyes?", p: "I review developer résumés and LinkedIn profiles, and help you plan a job search that actually lands interviews.", cta: "Get in touch →", href: "/#contact" },
     job: { h: "Not quite the right fit?", p: `Tell me what you're looking for and I'll keep you in mind for the next role. Or email ${site.email} directly.`, cta: "Send a message →", href: "/#contact" },
   }[kind];

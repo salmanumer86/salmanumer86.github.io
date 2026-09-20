@@ -39,7 +39,7 @@ export function listingMetadata(section: Section): Metadata {
     title: label.eyebrow,
     description: label.blurb,
     alternates: { canonical: `/${section}/` },
-    openGraph: { type: "website", title: `${label.eyebrow} — ${site.name}`, description: label.blurb, url: absoluteUrl(`/${section}/`) },
+    openGraph: { type: "website", title: `${label.eyebrow} | ${site.name}`, description: label.blurb, url: absoluteUrl(`/${section}/`) },
   };
 }
 

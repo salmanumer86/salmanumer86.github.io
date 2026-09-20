@@ -1,9 +1,9 @@
 export const site = {
   url: "https://salmanumer86.github.io",
   name: "Salman Umer",
-  title: "Salman Umer — Business Development & Tech Recruitment Specialist",
+  title: "Salman Umer | Business Development & Tech Recruitment Specialist",
   description:
-    "Salman Umer — Business Development & Tech Recruitment Specialist, Lahore. I connect companies with the right technology talent, outsourcing teams and long-term partnerships — and I write code myself, so I know who delivers.",
+    "Salman Umer, Business Development & Tech Recruitment Specialist in Lahore. I help companies hire software engineers, find outsourcing teams and build long-term partnerships. I also write code myself, so I know who delivers.",
   email: "salmanumer.dev@gmail.com",
   phone: "+923010147927",
   phoneDisplay: "+92 301 0147 927",

@@ -10,13 +10,13 @@ export function jobMetadata(slug: string): Metadata {
   if (!job) return {};
   const { meta } = job;
   const title = `${meta.title} at ${meta.company}`;
-  const description = meta.description || `${meta.title} — ${meta.company}, ${meta.location}.`;
+  const description = meta.description || `${meta.title} at ${meta.company}, ${meta.location}.`;
   return {
     title,
     description,
     alternates: { canonical: `/jobs/${slug}/` },
     keywords: [...meta.stack, meta.location, "jobs", "hiring"],
-    openGraph: { type: "website", title: `${title} — ${site.name}`, description, url: absoluteUrl(`/jobs/${slug}/`) },
+    openGraph: { type: "website", title: `${title} | ${site.name}`, description, url: absoluteUrl(`/jobs/${slug}/`) },
     robots: meta.draft || !isJobOpen(meta) ? { index: false, follow: true } : undefined,
   };
 }

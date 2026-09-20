@@ -14,19 +14,19 @@ const copy: Record<
         Notes from <span className="gold">both sides</span> of the hiring table.
       </>
     ),
-    body: "I'm writing about hiring and partnerships the way they actually happen: how to choose an outsourcing partner, what companies get wrong in the first month with a remote team, and how I screen the engineers who end up on your shortlist.",
+    body: "I'm writing about hiring and partnerships as they really happen: how to choose an outsourcing partner, what companies get wrong in the first month with a remote team, and how I screen the engineers who end up on your shortlist.",
     topics: ["Choosing an outsourcing partner in Pakistan", "How I screen React developers", "Warm introductions vs cold outreach", "What a good partnership looks like"],
     cta: { label: "Follow on LinkedIn for updates", href: site.linkedin },
-    alt: "Hiring right now? Skip the reading and",
+    alt: "Hiring right now?",
   },
   advice: {
     kicker: "Career advice in progress",
     title: (
       <>
-        Practical guidance for developers, <span className="gold">without the fluff</span>.
+        Practical career advice for <span className="gold">developers</span>.
       </>
     ),
-    body: "Résumés that clear the screening bar, LinkedIn profiles that get recruiter messages, and how to read a job offer. Written by someone who reads hundreds of developer CVs a month.",
+    body: "How to write a CV that gets past screening, how to set up a LinkedIn profile that gets recruiter messages, and how to read a job offer. Written by someone who reads hundreds of developer CVs every month.",
     topics: ["The developer résumé that gets read", "LinkedIn for engineers", "Interview follow-up questions", "Evaluating an offer"],
     cta: { label: "Follow on LinkedIn for updates", href: site.linkedin },
     alt: "Want feedback on your CV today?",
@@ -35,10 +35,10 @@ const copy: Record<
     kicker: "First roles opening soon",
     title: (
       <>
-        Open roles are <span className="gold">on the way</span>.
+        Open roles are <span className="gold">coming soon</span>.
       </>
     ),
-    body: "I'm lining up the first React, Next.js and full-stack positions with companies in Pakistan and abroad. Send your CV now and I'll match you before the roles go public.",
+    body: "I'm preparing the first React, Next.js and full-stack positions with companies in Pakistan and abroad. Send your CV now and I'll match you before the roles go public.",
     topics: ["React / Next.js", "React Native", "Full-stack", "Lahore · Remote"],
     cta: { label: "Send me your CV", href: `mailto:${site.email}?subject=${encodeURIComponent("CV for upcoming roles")}` },
     alt: "Hiring and want to list a role here?",

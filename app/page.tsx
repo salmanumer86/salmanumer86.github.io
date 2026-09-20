@@ -63,12 +63,12 @@ const testimonials: Testimonial[] = [
 ];
 
 const services = [
-  { no: "01", ic: "⇄", title: "Business Development & Client Partnerships", body: "Opening doors between companies, technology talent and software development opportunities — warm introductions built on working relationships, not cold lists." },
-  { no: "02", ic: "◎", title: "Software Development Outsourcing", body: "Matching businesses with reliable development teams in Pakistan, and helping software companies win the right clients. I stay involved after the contract is signed." },
-  { no: "03", ic: "</>", title: "Tech Recruitment & Talent Sourcing", body: "Sourcing, screening and shortlisting frontend and full-stack engineers — React, Next.js, React Native — who match your stack, seniority and team, not just keywords." },
-  { no: "04", ic: "✚", title: "Technology Hiring Support", body: "Strengthening technical teams for startups, founders and CTOs: from a single senior hire to building out a whole squad, with a shortlist that holds up in the interview room." },
-  { no: "05", ic: "in", title: "LinkedIn Profile Optimization", body: "Positioning developers and founders to be found and taken seriously — a headline, summary and experience section that turn profile views into real conversations." },
-  { no: "06", ic: "✎", title: "CV Optimization & Career Guidance", body: "Sharpening developer résumés to clear the screening bar, plus practical guidance on where to apply, how to interview and how to evaluate an offer." },
+  { no: "01", ic: "⇄", title: "Business Development & Client Partnerships", body: "Connecting companies with technology talent and software development opportunities. Personal introductions based on real working relationships, not cold lists." },
+  { no: "02", ic: "◎", title: "Software Development Outsourcing", body: "Matching businesses with reliable development teams in Pakistan, and helping software companies find the right clients. I stay involved after the contract is signed." },
+  { no: "03", ic: "</>", title: "Tech Recruitment & Talent Sourcing", body: "Sourcing, screening and shortlisting frontend and full-stack engineers (React, Next.js, React Native) who match your stack, seniority and team, not just keywords." },
+  { no: "04", ic: "✚", title: "Technology Hiring Support", body: "Helping startups, founders and CTOs build stronger technical teams, from a single senior hire to a full team. Every shortlist is checked properly before it reaches you." },
+  { no: "05", ic: "in", title: "LinkedIn Profile Optimization", body: "Helping developers and founders get found and taken seriously on LinkedIn. A clear headline, summary and experience section that turn profile views into real conversations." },
+  { no: "06", ic: "✎", title: "CV Optimization & Career Guidance", body: "Improving developer CVs so they get past screening, plus practical advice on where to apply, how to interview and how to judge an offer." },
 ];
 
 const audiences = [
@@ -87,7 +87,7 @@ const timeline = [
     co: "Jazzari",
     now: true,
     body: [
-      "Jazzari is a software services company. I handle the commercial side: finding clients, understanding what they need built, and matching them with engineers who can build it — sourcing, screening and shortlisting engineers for client roles, building outsourcing and hiring partnerships with companies in Pakistan and abroad, and running the hiring process end to end.",
+      "Jazzari is a software services company. I handle the commercial side: finding clients, understanding what they need built, and matching them with engineers who can build it. I source, screen and shortlist engineers for client roles, build outsourcing and hiring partnerships with companies in Pakistan and abroad, and run the hiring process from first call to start date.",
       "Three years of writing frontend code at Jazzari is what got me into business development, and it's what makes me good at it. When a client describes what they want built, I can hear what they actually need, tell whether the scope matches the budget, and push back on a timeline that won't hold. Clients stay because the first conversation was honest.",
     ],
   },
@@ -134,7 +134,7 @@ export default function Home() {
               Connecting companies with the <span className="gold">right</span> talent, teams and partnerships.
             </h1>
             <p className="hero-sub">
-              I help companies hire software engineers, outsource development and build long-term technology partnerships that create real business opportunities. And I write code myself, so I know who delivers.
+              I help companies hire software engineers, outsource development and build long-term technology partnerships. I also write code myself, so I know who delivers.
             </p>
             <div className="hero-cta">
               <a className="btn btn-gold" href="#contact?topic=Hiring%20software%20engineers">
@@ -147,7 +147,7 @@ export default function Home() {
             <div className="hero-trust">
               <span className="tdot" />
               <span>
-<b>12K+ network</b> · working relationships with reputable software companies across Pakistan
+<b>12K+ network</b> · working relationships with reputable software companies in Pakistan
               </span>
             </div>
             <div className="hero-loc">
@@ -160,7 +160,7 @@ export default function Home() {
             </div>
             <span className="badge">
               <span className="bdot" />
-              Talent &amp; partnerships <em className="grow">that last</em>
+              Hiring &amp; <em className="grow">partnerships</em>
             </span>
           </div>
         </div>
@@ -194,14 +194,14 @@ export default function Home() {
           <div>
             <span className="eyebrow">About</span>
             <h2 className="sec-title">
-              People, product <span className="em">and</span> partnerships. I work across all three.
+              People, product <span className="em">and</span> partnerships. I work on all three.
             </h2>
             <div className="about-body">
               <p>
                 I connect companies with the right technology talent and help build <strong>partnerships that create long-term business opportunities</strong>. I work with companies looking to hire software engineers, strengthen their technical teams, outsource development, or build reliable technology partnerships.
               </p>
               <p>
-                What makes my approach different is that I write code alongside the recruiting — <strong>React, Next.js and React Native</strong>, hands-on, week to week. I&apos;m not going to claim I can grade a senior engineer&apos;s architecture. What I can do is read their repo, follow the conversation, and ask a second question instead of nodding at a buzzword. That&apos;s usually enough to keep the wrong people off your shortlist, which is where most of the value in screening sits.
+                What makes my approach different is that I write code alongside the recruiting: <strong>React, Next.js and React Native</strong>, hands-on, week to week. I&apos;m not going to claim I can grade a senior engineer&apos;s architecture. What I can do is read their repo, follow the conversation, and ask a second question instead of nodding at a buzzword. That&apos;s usually enough to keep the wrong people off your shortlist, which is where most of the value in screening sits.
               </p>
               <p>I&apos;m also passionate about helping developers navigate the job market through CV optimization, LinkedIn positioning, and career opportunities.</p>
               <p>Before recruiting I spent years in operations and database administration, running teams and processes rather than writing job specs. That&apos;s where the read on people comes from.</p>
@@ -236,7 +236,7 @@ export default function Home() {
           <div className="sec-head center reveal">
             <span className="eyebrow center">What I do</span>
             <h2 className="sec-title">Business development, hiring &amp; outsourcing</h2>
-            <p>Support for companies that need talent, teams or partners — and for the developers and software houses on the other side of the table.</p>
+            <p>Support for companies that need talent, teams or partners, and for the developers and software houses on the other side.</p>
           </div>
           <div className="svc-grid stagger-grid">
             {services.map((s) => (
@@ -306,7 +306,7 @@ export default function Home() {
           <div className="sec-head reveal">
             <span className="eyebrow">Career</span>
             <h2 className="sec-title">From databases to operations to tech recruiting</h2>
-            <p>A path through database administration, operations leadership and family business before tech recruiting — which is where the read on both people and process comes from.</p>
+            <p>A path through database administration, operations management and the family business before tech recruiting. That is where my understanding of people and process comes from.</p>
           </div>
           <div className="timeline stagger-grid">
             {timeline.map((t) => (
@@ -331,7 +331,7 @@ export default function Home() {
             <span className="eyebrow center">Recommendations</span>
             <h2 className="sec-title">What people say about working with me</h2>
             <p>
-              A few words from colleagues, clients, and mentors I&apos;ve had the pleasure of working with — as shared on{" "}
+              A few words from colleagues, clients and mentors I have worked with, as shared on{" "}
               <a href={`${site.linkedin}/details/recommendations/`} target="_blank" rel="noopener" style={{ color: "var(--eyebrow)" }}>
                 LinkedIn
               </a>

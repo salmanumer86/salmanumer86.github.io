@@ -11,7 +11,7 @@ export const jobsListingMetadata: Metadata = {
   title: "Jobs",
   description: label.blurb,
   alternates: { canonical: "/jobs/" },
-  openGraph: { type: "website", title: `Jobs — ${site.name}`, description: label.blurb, url: absoluteUrl("/jobs/") },
+  openGraph: { type: "website", title: `Jobs | ${site.name}`, description: label.blurb, url: absoluteUrl("/jobs/") },
 };
 
 export function JobsListing() {
@@ -32,7 +32,7 @@ export function JobsListing() {
                 <div className="empty" style={{ marginBottom: 40 }}>
                   <b>No open roles right now.</b>
                   <br />
-                  Send me your CV anyway — I keep a shortlist for upcoming positions.
+                  Send me your CV anyway. I keep a shortlist for upcoming positions.
                 </div>
               )}
               {open.length > 0 && (
