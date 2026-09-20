@@ -14,8 +14,8 @@ const copy: Record<
         Notes from <span className="gold">both sides</span> of the hiring table.
       </>
     ),
-    body: "I'm writing about tech hiring the way it actually happens: how I screen React developers, what companies get wrong in the first month with a remote team, and what it really takes to hire in Pakistan.",
-    topics: ["How I screen React developers", "Hiring in Pakistan: what to expect", "Why keyword screening fails", "Building an outsourcing partnership"],
+    body: "I'm writing about hiring and partnerships the way they actually happen: how to choose an outsourcing partner, what companies get wrong in the first month with a remote team, and how I screen the engineers who end up on your shortlist.",
+    topics: ["Choosing an outsourcing partner in Pakistan", "How I screen React developers", "Warm introductions vs cold outreach", "What a good partnership looks like"],
     cta: { label: "Follow on LinkedIn for updates", href: site.linkedin },
     alt: "Hiring right now? Skip the reading and",
   },

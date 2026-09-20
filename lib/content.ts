@@ -89,9 +89,9 @@ export function isJobOpen(job: JobMeta, now = new Date()) {
 
 export const sectionLabel: Record<Section, { title: string; eyebrow: string; blurb: string }> = {
   blog: {
-    title: "Articles on tech hiring, from both sides of the table",
+    title: "Articles on hiring, outsourcing and partnerships",
     eyebrow: "Blog",
-    blurb: "Notes on recruiting, screening, and building teams — written by someone who also ships React.",
+    blurb: "Notes on business development, tech recruiting and building teams in Pakistan — written by someone who also ships React.",
   },
   advice: {
     title: "Career advice for developers",

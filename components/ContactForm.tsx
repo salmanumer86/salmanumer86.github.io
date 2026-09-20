@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { site } from "@/lib/site";
 
 // Submissions post to Web3Forms and are delivered to salmanumer.dev@gmail.com
@@ -12,6 +12,20 @@ type Note = { type: "ok" | "err"; msg: string } | null;
 export function ContactForm() {
   const [note, setNote] = useState<Note>(null);
   const [sending, setSending] = useState(false);
+  const [topic, setTopic] = useState("");
+
+  // Hero CTAs link to "#contact?topic=…" — prefill the topic field and scroll to the form.
+  useEffect(() => {
+    const apply = () => {
+      const m = window.location.hash.match(/^#contact\?topic=(.+)$/);
+      if (!m) return;
+      setTopic(decodeURIComponent(m[1]));
+      document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+    };
+    apply();
+    window.addEventListener("hashchange", apply);
+    return () => window.removeEventListener("hashchange", apply);
+  }, []);
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -36,6 +50,7 @@ export function ContactForm() {
       const r = await fetch(ENDPOINT, { method: "POST", headers: { Accept: "application/json" }, body: data });
       if (r.ok) {
         form.reset();
+        setTopic("");
         setNote({ type: "ok", msg: `Thanks, ${name}! Your message has been sent — I'll get back to you soon.` });
       } else {
         setNote({ type: "err", msg: `Something went wrong. Please email ${site.email} directly.` });
@@ -66,7 +81,7 @@ export function ContactForm() {
         <label htmlFor="cf_company">
           Company / topic <span className="opt">(optional)</span>
         </label>
-        <input type="text" id="cf_company" name="company" placeholder="Hiring React developers" />
+        <input type="text" id="cf_company" name="company" placeholder="Hiring React developers / outsourcing / partnership" value={topic} onChange={(e) => setTopic(e.target.value)} />
       </div>
       <div className="field">
         <label htmlFor="cf_message">Message</label>

@@ -576,3 +576,11 @@ h1.hero-title .gold,.contact h2 .gold{
 .soon-rss{margin-top:20px;font-size:13.5px;color:var(--muted)}
 .soon-rss a{color:var(--gold);text-decoration:underline;text-underline-offset:3px}
 @media(prefers-reduced-motion:reduce){.soon-ring,.soon-core,.soon-dot,.live-dot{animation:none}}
+
+/* ---------- WHO I WORK WITH (about) ---------- */
+.audiences{margin-top:8px;padding-top:26px;border-top:1px solid var(--border-soft)}
+.audiences h4{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--eyebrow);font-weight:600;margin-bottom:14px}
+.audiences ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px 22px}
+@media(max-width:560px){.audiences ul{grid-template-columns:1fr}}
+.audiences li{position:relative;padding-left:20px;font-size:15px;color:var(--text-dim);line-height:1.5}
+.audiences li::before{content:'';position:absolute;left:0;top:9px;width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px rgba(201,169,97,.18)}

@@ -85,7 +85,7 @@ export function Nav() {
         <div className="nav-right">
           <ThemeToggle />
           <Link href="/#contact" className="cta">
-            Let&apos;s talk hiring →
+            Let&apos;s talk business →
           </Link>
           <button
             type="button"
