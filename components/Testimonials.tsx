@@ -14,9 +14,7 @@ const AUTOPLAY = 5500;
 
 export function Testimonials({ items }: { items: Testimonial[] }) {
   const [i, setI] = useState(0);
-  const [height, setHeight] = useState<number | undefined>();
   const rootRef = useRef<HTMLDivElement>(null);
-  const slidesRef = useRef<(HTMLDivElement | null)[]>([]);
   const timer = useRef<ReturnType<typeof setInterval> | null>(null);
   const reduce = useRef(false);
 
@@ -36,28 +34,16 @@ export function Testimonials({ items }: { items: Testimonial[] }) {
     start();
   }, [start, stop]);
 
-  // measure active slide so the viewport animates height
-  const measure = useCallback(() => {
-    const el = slidesRef.current[i];
-    if (el) setHeight(el.offsetHeight);
-  }, [i]);
-
   useEffect(() => {
     reduce.current = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     start();
     const onVis = () => (document.hidden ? stop() : start());
     document.addEventListener("visibilitychange", onVis);
-    window.addEventListener("resize", measure);
-    const t = setTimeout(measure, 120);
     return () => {
       stop();
-      clearTimeout(t);
       document.removeEventListener("visibilitychange", onVis);
-      window.removeEventListener("resize", measure);
     };
-  }, [start, stop, measure]);
-
-  useEffect(measure, [measure]);
+  }, [start, stop]);
 
   // touch swipe
   const x0 = useRef<number | null>(null);
@@ -95,14 +81,11 @@ export function Testimonials({ items }: { items: Testimonial[] }) {
       onBlur={start}
       onKeyDown={onKey}
     >
-      <div className="tst-viewport" style={{ height }} onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
+      <div className="tst-viewport" onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
         <div className="tst-track" style={{ transform: `translateX(${-i * 100}%)` }}>
           {items.map((t, idx) => (
             <div
               key={t.name}
-              ref={(el) => {
-                slidesRef.current[idx] = el;
-              }}
               className={`tst-slide${idx === i ? " is-active" : ""}`}
               role="group"
               aria-roledescription="slide"
