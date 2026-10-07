@@ -35,7 +35,7 @@ const testimonials: Testimonial[] = [
       "I highly recommend Salman for his professionalism, dedication, and strong work ethic. He consistently demonstrates excellent communication and interpersonal skills while handling recruitment responsibilities efficiently.",
       "Salman has a great ability to connect with candidates and understand hiring needs, making him a valuable asset to any organization. It has been a pleasure working with him.",
     ],
-    relation: "Client",
+    relation: "Engineer I work with",
     name: "Fazal Karim",
     role: "Senior Full Stack Engineer · React, Rails, AWS",
     avatar: "/avatars/fazal.jpg",
@@ -49,16 +49,6 @@ const testimonials: Testimonial[] = [
     name: "Rizwana Naeem",
     role: "SEO Content Writer & eCommerce Content Manager",
     avatar: "/avatars/rizwana.jpg",
-  },
-  {
-    quote: [
-      "I have known Salman as my university fellow and brother for many years. He is a hardworking, honest, and supportive person who is always willing to help others.",
-      "Salman is dedicated to his work and learns quickly. I highly recommend him and wish him success in his career.",
-    ],
-    relation: "Mentor",
-    name: "Talha Khizar Hafiz",
-    role: "Lecturer & Research Scholar, Islamic Studies",
-    avatar: "/avatars/talha.jpg",
   },
 ];
 
@@ -88,13 +78,14 @@ const timeline = [
     now: true,
     body: [
       "Jazzari is a software services company. I handle the commercial side: finding clients, understanding what they need built, and matching them with engineers who can build it. I source, screen and shortlist engineers for client roles, build outsourcing and hiring partnerships with companies in Pakistan and abroad, and run the hiring process from first call to start date.",
-      "Three years of writing frontend code at Jazzari is what got me into business development, and it's what makes me good at it. When a client describes what they want built, I can hear what they actually need, tell whether the scope matches the budget, and push back on a timeline that won't hold. Clients stay because the first conversation was honest.",
+      "I also work in the frontend codebase alongside the commercial work, mainly React, Next.js and React Native. That is what makes the rest work. When a client describes what they want built, I can hear what they actually need, tell whether the scope matches the budget, and push back on a timeline that won't hold. Clients stay because the first conversation was honest.",
     ],
   },
-  { date: "Nov 2018 — Aug 2023", title: "Family Business Operations", co: "Events Management", body: ["Stepped away from formal employment to look after the family events management business — day-to-day operations, client coordination, vendor and supplier relationships, and general administration."] },
+  { date: "Nov 2018 — Aug 2023", title: "Family Business Operations", co: "Events Management", body: ["Returned to the family events management business after my time in manufacturing. Ran daily operations, client coordination, vendor and supplier relationships, and general administration."] },
   { date: "Oct 2016 — Nov 2018", title: "Assistant General Manager, Operations", co: "Duraflow Plastics Pvt Ltd", body: ["Led day-to-day operations and team coordination for a manufacturing operation in Lahore."] },
   { date: "Nov 2014 — Dec 2015", title: "Assistant General Manager", co: "Alif Industry SMC (TURKPLAST)", body: ["Managed operations and business functions for an industrial manufacturer in Lahore."] },
   { date: "Mar 2012 — Apr 2014", title: "Back Office Assistant", co: "Al Masraf", body: ["Supported back-office banking operations in Dubai, United Arab Emirates."] },
+  { date: "Nov 2007 — Feb 2012", title: "Family Business Operations", co: "Events Management", body: ["Joined the family events management business after leaving DESCON. Handled daily operations, client coordination and supplier relationships until I moved to Dubai in 2012."] },
   { date: "Mar 2003 — Oct 2007", title: "Database Administrator", co: "DESCON", body: ["Administered and maintained database systems for a leading engineering group in Lahore, where my technical career began."] },
 ];
 
@@ -151,7 +142,7 @@ export default function Home() {
               </span>
             </div>
             <div className="hero-loc">
-              <span className="dot" /> Based in Lahore, Pakistan · Open to collaborations worldwide
+              <span className="dot" /> Based in Lahore, Pakistan · Working with teams in the Gulf and worldwide
             </div>
           </div>
           <div className="portrait">
@@ -197,17 +188,16 @@ export default function Home() {
               People, product <span className="em">and</span> partnerships. I work on all three.
             </h2>
             <div className="about-body">
+              <p>I connect companies with engineers who can actually do the work. I can tell the difference because I write code myself.</p>
               <p>
-                I connect companies with the right technology talent and help build <strong>partnerships that create long-term business opportunities</strong>. I work with companies looking to hire software engineers, strengthen their technical teams, outsource development, or build reliable technology partnerships.
+                <strong>React, Next.js and React Native</strong>, hands on, alongside the recruiting. I&apos;m not going to claim I can grade a senior engineer&apos;s architecture. What I can do is read their repo, follow the conversation, and ask a second question instead of nodding at a buzzword. That&apos;s usually enough to keep the wrong people off your shortlist, which is where most of the value in screening sits.
               </p>
               <p>
-                What makes my approach different is that I write code alongside the recruiting: <strong>React, Next.js and React Native</strong>, hands-on, week to week. I&apos;m not going to claim I can grade a senior engineer&apos;s architecture. What I can do is read their repo, follow the conversation, and ask a second question instead of nodding at a buzzword. That&apos;s usually enough to keep the wrong people off your shortlist, which is where most of the value in screening sits.
+                I work with startups, software houses and growing companies that need to hire engineers, strengthen a team, or find a reliable delivery partner. Most of it is frontend and full stack work for companies in <strong>Pakistan and the Gulf</strong>. When a project needs design as well as build, I bring in designers for UI and UX, branding and graphics. I worked in Dubai for two years, so the Gulf is familiar ground.
               </p>
-              <p>I&apos;m also passionate about helping developers navigate the job market through CV optimization, LinkedIn positioning, and career opportunities.</p>
               <p>Before recruiting I spent years in operations and database administration, running teams and processes rather than writing job specs. That&apos;s where the read on people comes from.</p>
-              <p>
-                At <strong>Jazzari Software Solutions</strong>, I focus on business development and building connections between companies, technology talent, and software development opportunities.
-              </p>
+              <p>I also help developers find their way in the job market by improving their CVs, sharpening their LinkedIn profiles and pointing them to the right opportunities. A candidate who was treated properly comes back.</p>
+              <p>If you&apos;re hiring, building a team, or short on development capacity, message me.</p>
             </div>
             <div className="audiences">
               <h4>Who I work with</h4>
@@ -310,7 +300,7 @@ export default function Home() {
           </div>
           <div className="timeline stagger-grid">
             {timeline.map((t) => (
-              <div className={`tl-item${t.now ? " now" : ""}`} key={t.title + t.co}>
+              <div className={`tl-item${t.now ? " now" : ""}`} key={t.date + t.title}>
                 <div className="tl-date">{t.date}</div>
                 <h3>
                   {t.title} <span className="co">· {t.co}</span> {t.now && <span className="tl-tag">Current</span>}
@@ -331,7 +321,7 @@ export default function Home() {
             <span className="eyebrow center">Recommendations</span>
             <h2 className="sec-title">What people say about working with me</h2>
             <p>
-              A few words from colleagues, clients and mentors I have worked with, as shared on{" "}
+              A few words from colleagues and clients I have worked with, as shared on{" "}
               <a href={`${site.linkedin}/details/recommendations/`} target="_blank" rel="noopener" style={{ color: "var(--eyebrow)" }}>
                 LinkedIn
               </a>
